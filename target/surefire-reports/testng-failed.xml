@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.testngdemo.automation.functional.Testsuite_1st_research_google">
+        <methods>
+          <include name="setup"/>
+          <include name="Research_a_word_on_google"/>
+        </methods>
+      </class> <!-- com.testngdemo.automation.functional.Testsuite_1st_research_google -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

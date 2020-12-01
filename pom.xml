@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>prova1</groupId>
+  <artifactId>prova1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>prova</name>
+  <description>provaaa</description>
+  <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+  </build>
+  
+  
+  <dependencies>
+   
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.9.8</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.0.0-alpha-2</version>
+    </dependency>
+    
+    <dependency>
+       <groupId>org.seleniumhq.selenium</groupId>
+       <artifactId>selenium-server</artifactId>
+       <version>4.0.0-alpha-2</version>
+    </dependency>
+
+	 <dependency>
+       <groupId>org.seleniumhq.selenium</groupId>
+       <artifactId>selenium-firefox-driver</artifactId>
+       <version>4.0.0-alpha-2</version>
+     </dependency>
+
+  	 <dependency>		
+    		<groupId>org.apache.logging.log4j</groupId>
+    		<artifactId>log4j-api</artifactId>
+    		<version>2.14.0</version>
+  	 </dependency>
+  	 
+  	 <dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    		<artifactId>log4j-core</artifactId>
+    		<version>2.14.0</version>
+  	 
+  	 </dependency>
+</dependencies>
+</project>
