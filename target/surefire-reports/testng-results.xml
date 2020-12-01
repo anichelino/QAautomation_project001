@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="13419" started-at="2020-12-01T13:10:24Z" finished-at="2020-12-01T13:10:38Z">
+  <suite name="Command line suite" duration-ms="10718" started-at="2020-12-01T15:20:09Z" finished-at="2020-12-01T15:20:20Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="13419" started-at="2020-12-01T13:10:24Z" finished-at="2020-12-01T13:10:38Z">
+    <test name="Command line test" duration-ms="10718" started-at="2020-12-01T15:20:09Z" finished-at="2020-12-01T15:20:20Z">
       <class name="com.testngdemo.automation.functional.Testsuite_1st_research_google">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.testngdemo.automation.functional.Testsuite_1st_research_google@5c5eefef]" name="setup" is-config="true" duration-ms="13324" started-at="2020-12-01T14:10:24Z" finished-at="2020-12-01T14:10:38Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.testngdemo.automation.functional.Testsuite_1st_research_google@5c5eefef]" name="setup" is-config="true" duration-ms="10570" started-at="2020-12-01T16:20:09Z" finished-at="2020-12-01T16:20:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Research_a_word_on_google()[pri:0, instance:com.testngdemo.automation.functional.Testsuite_1st_research_google@5c5eefef]" name="Research_a_word_on_google" duration-ms="85" started-at="2020-12-01T14:10:38Z" finished-at="2020-12-01T14:10:38Z">
+        <test-method status="PASS" signature="Research_a_word_on_google()[pri:0, instance:com.testngdemo.automation.functional.Testsuite_1st_research_google@5c5eefef]" name="Research_a_word_on_google" duration-ms="129" started-at="2020-12-01T16:20:20Z" finished-at="2020-12-01T16:20:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Research_a_word_on_google -->
