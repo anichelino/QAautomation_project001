@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="TestSuite" time="0.129" errors="0" skipped="0">
+<testsuite tests="2" failures="1" name="TestSuite" time="0.46" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_241\bin"/>
@@ -27,9 +27,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\F92613C\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4259584144478620731.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\F92613C\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf9162602897054914585.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_241\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_241/bin/server;C:/Program Files/Java/jre1.8.0_241/bin;C:/Program Files/Java/jre1.8.0_241/lib/amd64;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\F92613C\Documents\mozilla driver;C:\Users\F92613C\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\F92613C\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\F92613C\AppData\Local\Microsoft\WindowsApps;;C:\Users\F92613C\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;;C:\Users\F92613C\Desktop\eclipse;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_241\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_241/bin/server;C:/Program Files/Java/jre1.8.0_241/bin;C:/Program Files/Java/jre1.8.0_241/lib/amd64;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\F92613C\Documents\mozilla driver;C:\Users\F92613C\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\F92613C\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\F92613C\AppData\Local\Microsoft\WindowsApps;;C:\Users\F92613C\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;;C:\Users\F92613C\Desktop\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,5 +61,17 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="Research_a_word_on_google" time="0.129"/>
+  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="Research_a_word_on_guru" time="0.145"/>
+  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="testPDFReporTwo" time="0.315">
+    <failure message="did not expect to find [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: did not expect to find [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at com.testngdemo.automation.functional.Testsuite_1st_research_google.testPDFReporTwo(Testsuite_1st_research_google.java:53)
+</failure>
+    <system-out>Test Started-&gt;testPDFReporTwo
+Test Failed-&gt;testPDFReporTwo
+</system-out>
+  </testcase>
 </testsuite>

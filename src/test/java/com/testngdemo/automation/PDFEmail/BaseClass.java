@@ -1,34 +1,23 @@
-package com.testngdemo.automation.functional;
+package com.testngdemo.automation.PDFEmail;
 
-import java.awt.Image;
 import java.io.File;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.testnegdemo.automation.singletests.TestAsSeparated;
-
-public class TestSuitesBases {
-
-	protected static Logger loggerTest = LogManager.getLogger(TestAsSeparated.class);
-
-	protected String baseUrl = "https://www.google.com";
-
-	public Image image;
-	public File DestFile;
+public class BaseClass {
 
 	static WebDriver driver;
 
 	public static WebDriver getDriver() {
 
 		if (driver == null) {
-			String driverlocator = System.getProperty("user.dir") + "\\drivers" + "\\geckodriver.exe";
-			System.setProperty("webdriver.gecko.driver", driverlocator);
+
+			WebDriver driver;
+			System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
 			driver = new FirefoxDriver();
 
 		}
@@ -49,7 +38,7 @@ public class TestSuitesBases {
 	 * 
 	 */
 
-	public static File takeSnapShot(WebDriver webdriver, String fileWithPath) throws Exception {
+	public static void takeSnapShot(WebDriver webdriver, String fileWithPath) throws Exception {
 
 		// Convert web driver object to TakeScreenshot
 
@@ -67,7 +56,6 @@ public class TestSuitesBases {
 
 		FileUtils.copyFile(SrcFile, DestFile);
 
-		return DestFile;
 	}
 
 }
