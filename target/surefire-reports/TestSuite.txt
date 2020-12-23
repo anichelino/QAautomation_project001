@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 20.558 sec <<< FAILURE!
-testPDFReporTwo(com.testngdemo.automation.functional.Testsuite_1st_research_google)  Time elapsed: 0.315 sec  <<< FAILURE!
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 94.064 sec <<< FAILURE!
+testPDFReporTwo(com.testngdemo.automation.functional.Testsuite_1st_research_google)  Time elapsed: 0.506 sec  <<< FAILURE!
 java.lang.AssertionError: did not expect to find [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.failNotEquals(Assert.java:969)

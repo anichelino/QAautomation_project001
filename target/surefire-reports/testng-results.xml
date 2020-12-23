@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="19518" started-at="2020-12-21T12:34:41 CET" finished-at="2020-12-21T12:35:00 CET">
+  <suite name="Command line suite" duration-ms="93070" started-at="2020-12-23T15:38:08 CET" finished-at="2020-12-23T15:39:41 CET">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="19518" started-at="2020-12-21T12:34:41 CET" finished-at="2020-12-21T12:35:00 CET">
+    <test name="Command line test" duration-ms="93070" started-at="2020-12-23T15:38:08 CET" finished-at="2020-12-23T15:39:41 CET">
       <class name="com.testngdemo.automation.functional.Testsuite_1st_research_google">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.testngdemo.automation.functional.Testsuite_1st_research_google@77888435]" name="setup" is-config="true" duration-ms="19026" started-at="2020-12-21T12:34:41 CET" finished-at="2020-12-21T12:35:00 CET">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.testngdemo.automation.functional.Testsuite_1st_research_google@51399530]" name="setup" is-config="true" duration-ms="92386" started-at="2020-12-23T15:38:08 CET" finished-at="2020-12-23T15:39:41 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Research_a_word_on_guru()[pri:0, instance:com.testngdemo.automation.functional.Testsuite_1st_research_google@77888435]" name="Research_a_word_on_guru" duration-ms="142" started-at="2020-12-21T12:35:00 CET" finished-at="2020-12-21T12:35:00 CET">
+        <test-method status="PASS" signature="Research_a_word_on_guru()[pri:0, instance:com.testngdemo.automation.functional.Testsuite_1st_research_google@51399530]" name="Research_a_word_on_guru" duration-ms="150" started-at="2020-12-23T15:39:41 CET" finished-at="2020-12-23T15:39:41 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Research_a_word_on_guru -->
-        <test-method status="FAIL" signature="testPDFReporTwo()[pri:0, instance:com.testngdemo.automation.functional.Testsuite_1st_research_google@77888435]" name="testPDFReporTwo" duration-ms="2" started-at="2020-12-21T12:35:00 CET" finished-at="2020-12-21T12:35:00 CET">
+        <test-method status="FAIL" signature="testPDFReporTwo()[pri:0, instance:com.testngdemo.automation.functional.Testsuite_1st_research_google@51399530]" name="testPDFReporTwo" duration-ms="4" started-at="2020-12-23T15:39:41 CET" finished-at="2020-12-23T15:39:41 CET">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[did not expect to find [true] but found [false]]]>

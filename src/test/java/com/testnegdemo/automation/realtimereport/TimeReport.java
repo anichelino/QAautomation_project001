@@ -1,32 +1,28 @@
 package com.testnegdemo.automation.realtimereport;
 
 import java.io.File;
-import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
 import java.util.Random;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.Element;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.Font.FontFamily;
-import com.itextpdf.text.Image;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
-import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.io.image.ImageData;
+import com.itextpdf.io.image.ImageDataFactory;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Cell;
+import com.itextpdf.layout.element.Image;
+import com.itextpdf.layout.element.Table;
 import com.testngdemo.automation.functional.TestSuitesBases;
 
 public class TimeReport implements ITestListener {
 
-	PdfPTable FailTable;
-	Document document = new Document();
-	final String pdfName = System.getProperty("user.dir") + "//Pdferror.pdf";
-	File fileScreenshot;
-	Image image;
+	Table FailTable;
+	Document document;
 
 	public void onFinish(ITestContext arg0) {
 		System.out.println("END Of Execution(TEST)->" + arg0.getName());
@@ -39,13 +35,15 @@ public class TimeReport implements ITestListener {
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public void onTestFailure(ITestResult arg0) {
+		String pdfName = System.getProperty("user.dir") + "//Pdferror.pdf";
+		PdfWriter writer;
 
 		String file = System.getProperty("user.dir") + "//" + "Screenshoot" + (new Random().nextInt()) + ".png";
+		File fileScreenshot;
 		try {
 			fileScreenshot = TestSuitesBases.takeSnapShot(TestSuitesBases.getDriver(), file);
 		} catch (Exception e) {
@@ -53,37 +51,28 @@ public class TimeReport implements ITestListener {
 		}
 		System.out.println("Test Failed->" + arg0.getName());
 
-		this.FailTable = new PdfPTable(new float[] { .10f, .3f, .1f, .3f });
-		this.FailTable.setTotalWidth(40f);
-		Paragraph p = new Paragraph("Failed Tests",
-				new Font(FontFamily.TIMES_ROMAN, 18, Font.BOLDITALIC, new BaseColor(0, 0, 255)));
-		p.setAlignment(Element.ALIGN_CENTER);
-
-		PdfPCell cell = new PdfPCell(p);
-		cell.setColspan(4);
-		cell.setBackgroundColor(BaseColor.RED);
-		cell.setHorizontalAlignment(Element.ALIGN_CENTER);
-		this.FailTable.addCell(cell);
-		Paragraph screen = new Paragraph("Schreenshoot", new Font(FontFamily.TIMES_ROMAN, Font.DEFAULTSIZE, Font.BOLD));
-		screen.setAlignment(Element.ALIGN_CENTER);
-
-		PdfPCell cell2 = new PdfPCell(screen);
-		cell2.setColspan(4);
-		cell2.setBackgroundColor(BaseColor.YELLOW);
-		cell2.setHorizontalAlignment(Element.ALIGN_CENTER);
-		this.FailTable.addCell(cell2);
-
-		PdfPCell cell3 = new PdfPCell(image);
-		this.FailTable.addCell(cell3);
+		float[] pointColumnWidths = { 20F, 20F };
+		this.FailTable = new Table(pointColumnWidths);
 
 		try {
-			PdfWriter.getInstance(document, new FileOutputStream(pdfName));
-			document.open();
+			ImageData data = ImageDataFactory.create(file);
+			Image image = new Image(data);
+			Cell cell3 = new Cell();
+			cell3.add(image.setAutoScale(true));
+			this.FailTable.addCell(cell3);
+		} catch (MalformedURLException e) {
+			throw new RuntimeException(e);
+		}
+		try {
+			writer = new PdfWriter(pdfName);
+			PdfDocument pdfDoc = new PdfDocument(writer);
+			Document document = new Document(pdfDoc);
 			document.add(FailTable);
 			document.close();
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
 		}
+
 	}
 
 	public void onTestSkipped(ITestResult arg0) {
