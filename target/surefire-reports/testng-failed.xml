@@ -5,8 +5,11 @@
     <classes>
       <class name="com.testngdemo.automation.functional.Testsuite_1st_research_google">
         <methods>
+          <include name="testPDFReporThree"/>
           <include name="setup"/>
+          <include name="Research_a_word_on_guru"/>
           <include name="testPDFReporTwo"/>
+          <include name="getResult"/>
         </methods>
       </class> <!-- com.testngdemo.automation.functional.Testsuite_1st_research_google -->
     </classes>

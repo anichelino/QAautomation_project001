@@ -1,12 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 94.064 sec <<< FAILURE!
-testPDFReporTwo(com.testngdemo.automation.functional.Testsuite_1st_research_google)  Time elapsed: 0.506 sec  <<< FAILURE!
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 4, Time elapsed: 9.982 sec <<< FAILURE!
+Research_a_word_on_guru(com.testngdemo.automation.functional.Testsuite_1st_research_google)  Time elapsed: 0.138 sec  <<< FAILURE!
 java.lang.AssertionError: did not expect to find [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.failNotEquals(Assert.java:969)
 	at org.testng.Assert.assertTrue(Assert.java:43)
 	at org.testng.Assert.assertTrue(Assert.java:53)
-	at com.testngdemo.automation.functional.Testsuite_1st_research_google.testPDFReporTwo(Testsuite_1st_research_google.java:53)
+	at com.testngdemo.automation.functional.Testsuite_1st_research_google.Research_a_word_on_guru(Testsuite_1st_research_google.java:66)
+
+getResult(com.testngdemo.automation.functional.Testsuite_1st_research_google)  Time elapsed: 0.46 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.testnegdemo.automation.realtimereport.Report_table.Add_Report_voice(Report_table.java:32)
+	at com.testngdemo.automation.functional.Testsuite_1st_research_google.getResult(Testsuite_1st_research_google.java:106)
 

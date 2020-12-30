@@ -9,14 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseClass {
-
 	static WebDriver driver;
 
 	public static WebDriver getDriver() {
 
 		if (driver == null) {
 
-			WebDriver driver;
 			System.setProperty("webdriver.gecko.driver", "C:\\geckodriver.exe");
 			driver = new FirefoxDriver();
 

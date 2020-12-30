@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="1" name="TestSuite" time="0.66" errors="0" skipped="0">
+<testsuite tests="6" failures="2" name="TestSuite" time="0.598" errors="0" skipped="4">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_241\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\F92613C\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2491526222537877190.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\F92613C\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4071812164765423569.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_241\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_241/bin/server;C:/Program Files/Java/jre1.8.0_241/bin;C:/Program Files/Java/jre1.8.0_241/lib/amd64;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\F92613C\Documents\mozilla driver;C:\Users\F92613C\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\F92613C\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\F92613C\AppData\Local\Microsoft\WindowsApps;;C:\Users\F92613C\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;;C:\Users\F92613C\Desktop\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,21 +61,59 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="Research_a_word_on_guru" time="0.154"/>
-  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="testPDFReporTwo" time="0.506">
+  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="Research_a_word_on_guru" time="0.138">
     <failure message="did not expect to find [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: did not expect to find [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:97)
 	at org.testng.Assert.failNotEquals(Assert.java:969)
 	at org.testng.Assert.assertTrue(Assert.java:43)
 	at org.testng.Assert.assertTrue(Assert.java:53)
-	at com.testngdemo.automation.functional.Testsuite_1st_research_google.testPDFReporTwo(Testsuite_1st_research_google.java:53)
+	at com.testngdemo.automation.functional.Testsuite_1st_research_google.Research_a_word_on_guru(Testsuite_1st_research_google.java:66)
 </failure>
-    <system-out>Test Started-&gt;testPDFReporTwo
-Test Failed-&gt;testPDFReporTwo
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@66048bfd
+Start Of Execution(TEST)-&gt;Command line test
+Test Started-&gt;Research_a_word_on_guru
+inserting the element
+2020-12-28 17:00:23,881 INFO  method: [main] pages.Page (Page.java:18) - page initiated
+</system-out>
+    <system-err>1609171216651	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe&quot; &quot;-marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\F92613C\\AppData\\Local\\Temp\\rust_mozprofileMFe2Z3&quot;
+Can&apos;t find symbol &apos;eglSwapBuffersWithDamageEXT&apos;.
+Can&apos;t find symbol &apos;eglSetDamageRegionKHR&apos;.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can&apos;t find profile directory.
+console.warn: SearchSettings: &quot;get: No settings file exists, new profile?&quot; (new Error(&quot;&quot;, &quot;(unknown module)&quot;))
+1609171219795	Marionette	INFO	Listening on port 51108
+1609171220290	Marionette	WARN	TLS certificate errors will be ignored for this session
+dic 28, 2020 5:00:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMAZIONI: Detected dialect: W3C
+</system-err>
+  </testcase>
+  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="getResult" time="0.46">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.testnegdemo.automation.realtimereport.Report_table.Add_Report_voice(Report_table.java:32)
+	at com.testngdemo.automation.functional.Testsuite_1st_research_google.getResult(Testsuite_1st_research_google.java:106)
+</failure>
+    <system-out>Test Failed-&gt;Research_a_word_on_guru
 </system-out>
     <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 </system-err>
+  </testcase>
+  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="testPDFReporThree" time="0">
+    <skipped/>
+    <system-out>Test Started-&gt;testPDFReporThree
+Test Skipped-&gt;testPDFReporThree
+</system-out>
+  </testcase>
+  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="getResult" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="testPDFReporTwo" time="0">
+    <skipped/>
+    <system-out>Test Started-&gt;testPDFReporTwo
+Test Skipped-&gt;testPDFReporTwo
+</system-out>
+  </testcase>
+  <testcase classname="com.testngdemo.automation.functional.Testsuite_1st_research_google" name="getResult" time="0">
+    <skipped/>
   </testcase>
 </testsuite>
